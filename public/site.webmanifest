@@ -1,0 +1,14 @@
+{
+  "name": "Vercel",
+  "short_name": "Vercel",
+  "icons": [
+    {
+      "src": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
