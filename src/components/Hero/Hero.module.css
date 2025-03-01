@@ -1,65 +1,43 @@
-.heroMain {
+.root {
   width: 100%;
   max-width: 100vw;
+  --sm-grid-rows: 4;
+  --md-grid-rows: 8;
+  --sm-grid-columns: 8;
+  --md-grid-columns: 12;
+  --sm-height: calc(var(--width) / var(--grid-columns) * var(--grid-rows));
 }
 
-.heroGridWrapper {
-  width: 100%;
-}
-
-/* Mobile grid */
-.mobileGrid {
-  display: grid;
-  grid-template-rows: 2;
-  grid-template-columns: 1;
-  height: fit-content;
-}
-
-/* Desktop grid */
-.desktopGrid {
-  display: grid;
-  grid-template-rows: 4;
-  grid-template-columns: 8;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .desktopGrid {
-    grid-template-rows: 8;
-    grid-template-columns: 12;
-  }
-}
-
-/* Mobile only shows on smaller screens */
-.mobileDisplay {
-  display: grid;
-}
-
-.desktopDisplay {
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .mobileDisplay {
-    display: none;
-  }
-  .desktopDisplay {
-    display: grid;
-  }
-}
-
-.gradientBg {
-  position: absolute;
+.gradient {
+  --sm-grid-row: 1/-1;
+  --sm-grid-column: 1/-1;
+  --sm-cell-rows: -2;
+  --sm-cell-columns: -2;
+  padding: 0;
   z-index: 0;
-  padding: 0;
 }
 
-.triangleContainer {
-  position: absolute;
+.triangle {
+  --sm-grid-row: 1/-1;
+  --sm-grid-column: 1/-1;
+  --sm-cell-rows: -2;
+  --sm-cell-columns: -2;
   padding: 0;
+  
 }
 
-.heroContentCell {
+.desktop {
+  --sm-grid-row: 1 / span 1;
+  --smd-grid-row: 2/6;
+  --sm-grid-column: 1 / span 1;
+  --smd-grid-column: 2/12;
+  --sm-cell-rows: 1;
+  --smd-cell-rows: 4;
+  --sm-cell-columns: 1;
+  --smd-cell-columns: 10;
+}
+
+.heroCell {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,13 +45,7 @@
   gap: 24px;
 }
 
-@media (min-width: 768px) {
-  .heroContentCell {
-    gap: 32px;
-  }
-}
-
-.heroTitle {
+.heading {
   color: var(--ds-gray-1000);
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -81,7 +53,7 @@
   text-align: center;
 }
 
-.heroSubtitle {
+.subHeading {
   color: var(--ds-gray-900);
   font-size: 1rem;
   line-height: 1.5rem;
@@ -89,28 +61,28 @@
   text-align: center;
 }
 
-@media (min-width: 1024px) {
-  .heroSubtitle {
-    font-size: 1.25rem;
-    line-height: 2.25rem;
-  }
-}
-
-.buttonContainer {
+.buttons {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
+  padding: 0;
   gap: 16px;
 }
 
-@media (min-width: 768px) {
-  .buttonContainer {
-    gap: 24px;
-  }
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.heroButtonPrimary {
+.buttonPrefix {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.primaryButton {
   background-color: #000;
   color: #fff;
   border-radius: 8px;
@@ -125,11 +97,7 @@
   transition: all 0.2s ease;
 }
 
-.heroButtonPrimary:hover {
-  background-color: #333;
-}
-
-.heroButtonSecondary {
+.secondaryButton {
   background-color: #fff;
   color: #000;
   border-radius: 8px;
@@ -144,35 +112,35 @@
   transition: all 0.2s ease;
 }
 
-.heroButtonSecondary:hover {
-  background-color: #f5f5f5;
-}
-
-.buttonIconPrefix {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonTextContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonTextSmall {
+.small {
   display: none;
 }
 
-.buttonTextLarge {
+.large {
   display: block;
 }
 
 @media (max-width: 640px) {
-  .buttonTextSmall {
+  .small {
     display: block;
   }
-  .buttonTextLarge {
+  
+  .large {
     display: none;
+  }
+  
+  .heroCell {
+    gap: 32px;
+  }
+  
+  .buttons {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subHeading {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
   }
 }
