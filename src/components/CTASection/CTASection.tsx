@@ -14,23 +14,23 @@ const CTASection: React.FC = () => {
         showGuides
       >
         <GridBlock className={styles.ctaCell}>
-          <div className={styles.stack}>
-            <div className={styles.primaryContent}>
+          <div className={styles.ctaStack}>
+            <div className={styles.ctaPrimaryContent}>
                 <p>
-                  <b className={styles.boldWhite}>Ready to deploy? </b>
+                  <b className={styles.ctaBoldWhite}>Ready to deploy? </b>
                   Start building with a free account. Speak to an expert for your{' '}
                   <i>Pro</i> or <u>Enterprise</u> needs.
                 </p>
-              <div className={styles.buttonGroup}>
+              <div className={styles.ctaButtonGroup}>
                 <Link
                   href="/new"
-                  className={styles.primaryButton}
+                  className={styles.ctaPrimaryButton}
                 >
                   Start Deploying
                 </Link>
                 <Link
                   href="/contact/sales"
-                  className={styles.secondaryButton}
+                  className={styles.ctaSecondaryButton}
                 >
                   Talk to an Expert
                 </Link>
@@ -39,17 +39,17 @@ const CTASection: React.FC = () => {
           </div>
         </GridBlock>
 
-        <GridBlock className={styles.enterpriseCell}>
-          <div className={styles.stack}>
-            <div className={styles.secondaryContent}>
+        <GridBlock className={styles.ctaEnterpriseCell}>
+          <div className={styles.ctaStack}>
+            <div className={styles.ctaSecondaryContent}>
                 <p>
                   <b>Explore Vercel Enterprise</b> with an interactive product tour,
                   trial, or a personalized demo.
                 </p>
-              <div className={styles.enterpriseButton}>
+              <div className={styles.ctaEnterpriseButton}>
                 <Link
                   href="/try-enterprise"
-                  className={styles.secondaryButton}
+                  className={styles.ctaSecondaryButton}
                 >
                   Explore Enterprise
                 </Link>

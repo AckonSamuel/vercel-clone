@@ -32,7 +32,6 @@ export const Gauge: React.FC<GaugeProps> = ({
       data-geist-progress-circle=""
       data-version="v1"
       style={{
-        '--circle-size': '100px',
         '--circumference': circumference,
         '--percent-to-px': percentToPx,
         '--gap-percent': 6,

@@ -25,29 +25,29 @@ export const DeploymentCard: React.FC<DeploymentCardProps> = ({
 }) => {
   return (
     <div 
-      className={`${styles.deploymentCard}`} 
+      className={`${styles.rollbackDeploymentCard}`} 
       data-version="v1" 
       data-variant={variant}
     >
       {/* Left Column */}
-      <div className={styles.deploymentInfo}>
+      <div className={styles.rollbackDeploymentInfo}>
         {/* Top Row */}
-        <div className={styles.deploymentHeader}>
-          <span className={styles.deploymentId}>
+        <div className={styles.rollbackDeploymentHeader}>
+          <span className={styles.rollbackDeploymentId}>
             vercel-site/
             <strong>{deploymentId}</strong>
           </span>
-          <span className={styles.timeAgo}>{timeAgo}</span>
+          <span className={styles.rollbackTimeAgo}>{timeAgo}</span>
         </div>
         
         {/* Bottom Row */}
-        <div className={styles.commitInfo}>
+        <div className={styles.rollbackCommitInfo}>
           <svg 
             data-testid="geist-icon" 
             height="16" 
             width="16"
             viewBox="0 0 16 16"
-            className={styles.commitIcon}
+            className={styles.rollbackCommitIcon}
           >
             <path 
               fillRule="evenodd" 
@@ -56,18 +56,18 @@ export const DeploymentCard: React.FC<DeploymentCardProps> = ({
               fill="currentColor"
             />
           </svg>
-          <span className={styles.commitHash}>{commitHash}</span>
-          <span className={styles.commitMessage} data-variant="short">
+          <span className={styles.rollbackCommitHash}>{commitHash}</span>
+          <span className={styles.rollbackCommitMessage} data-variant="short">
             {commitMessageShort}
           </span>
-          <span className={styles.commitMessage} data-variant="long">
+          <span className={styles.rollbackCommitMessage} data-variant="long">
             {commitMessageLong}
           </span>
         </div>
       </div>
 
       {/* Right Column */}
-      <div className={styles.gaugeWrapper}>
+      <div className={styles.rollbackGaugeWrapper}>
         <Gauge 
           value={gaugeValue} 
           color={gaugeColor} 
@@ -77,3 +77,5 @@ export const DeploymentCard: React.FC<DeploymentCardProps> = ({
     </div>
   );
 };
+
+export default DeploymentCard;

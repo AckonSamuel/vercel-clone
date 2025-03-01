@@ -26,59 +26,58 @@ const TEAM_MEMBERS = {
 
 export const ConformanceSection: React.FC = () => {
   return (
-    <GridBlock className={styles.cell}>
-      <div className={styles.content}>
-        <div className={styles.header}>
-          <div className={styles.iconWrapper}>
+      <div className={styles.conformanceCell}>
+        <div className={styles.conformanceHeader}>
+          <div className={styles.conformanceIconWrapper}>
             <RepositoryIcon />
           </div>
-          <h2 className={styles.label}>Conformance</h2>
+          <h2 className={styles.conformanceLabel}>Conformance</h2>
         </div>
 
-        <div className={styles.title}>
-          <strong>Move fast, don't break things.</strong>
-          <p>Keep quality high while maintaining velocity with Enterprise Monorepos.</p>
+        <div className={styles.conformanceTitle}>
+        <p><strong>Move fast, don't break things. </strong>
+          Keep quality high while maintaining velocity with Enterprise Monorepos.</p>
         </div>
 
-        <div className={styles.dashboard}>
-          <div className={styles.column}>
-            <h3 className={styles.heading}>Conformance</h3>
-            <div className={styles.metrics}>
-              <div className={styles.metric}>
-                <div className={styles.metricLabel}>Excellent</div>
-                <div className={styles.metricValue}>
+        <div className={styles.conformanceDashboard}>
+          <div className={styles.conformanceColumn}>
+            <h3 className={styles.conformanceHeading}>Conformance</h3>
+            <div className={styles.conformanceMetrics}>
+              <div className={styles.conformanceMetric}>
+                <div className={styles.conformanceMetricLabel}>Excellent</div>
+                <div className={styles.conformanceMetricValue}>
                   <Gauge value={90} size={20} />
-                  <span className={styles.score}>9.5</span>
+                  <span className={styles.conformanceScore}>9.5</span>
                 </div>
               </div>
-              <div className={styles.metric}>
-                <div className={styles.metricLabel}>Total Issues</div>
-                <div className={styles.metricValue}>
-                  <span className={styles.score}>34</span>
+              <div className={styles.conformanceMetric}>
+                <div className={styles.conformanceMetricLabel}>Total Issues</div>
+                <div className={styles.conformanceMetricValue}>
+                  <span className={styles.conformanceScore}>34</span>
                 </div>
               </div>
-              <div className={styles.metric}>
-                <div className={styles.metricLabel}>Major Issues</div>
-                <div className={styles.metricValue}>
-                  <span className={styles.score}>12</span>
+              <div className={styles.conformanceMetric}>
+                <div className={styles.conformanceMetricLabel}>Major Issues</div>
+                <div className={styles.conformanceMetricValue}>
+                  <span className={styles.conformanceScore}>12</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <hr className={styles.divider} />
+          <hr className={styles.conformanceDivider} />
 
-          <div className={styles.column}>
-            <h3 className={styles.heading}>Code Owners</h3>
-            <div className={styles.teams}>
+          <div className={styles.conformanceColumn}>
+            <h3 className={styles.conformanceHeading}>Code Owners</h3>
+            <div className={styles.conformanceTeams}>
               {Object.entries(TEAM_MEMBERS).map(([team, members]) => (
-                <div key={team} className={styles.team}>
-                  <span className={styles.teamName}>
-                    <span className={styles.scope}>@vercel</span>/{team}
+                <div key={team} className={styles.conformanceTeam}>
+                  <span className={styles.conformanceTeamName}>
+                    <span className={styles.conformanceScope}>@vercel</span>/{team}
                   </span>
-                  <div className={styles.avatarGroup}>
+                  <div className={styles.conformanceAvatarGroup}>
                     {members.map(member => (
-                      <div key={member.username} className={styles.avatar}>
+                      <div key={member.username} className={styles.conformanceAvatar}>
                         <img
                           src={`https://vercel.com/api/www/avatar?u=${member.username}&s=44`}
                           alt={`Avatar for ${member.name}`}
@@ -94,7 +93,6 @@ export const ConformanceSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </GridBlock>
   );
 };
 

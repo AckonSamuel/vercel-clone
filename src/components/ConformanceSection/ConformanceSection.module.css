@@ -1,143 +1,134 @@
-.cell {
+.conformanceCell {
   contain-intrinsic-height: 455px;
   content-visibility: auto;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  height: 100%;
-}
-
-.header {
+.conformanceHeader {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.iconWrapper {
+.conformanceIconWrapper {
   color: var(--ds-gray-900);
   height: 16px;
   width: 16px;
 }
 
-.label {
+.conformanceLabel {
   color: var(--ds-gray-900);
   font-size: 0.875rem;
   font-weight: 400;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.title strong {
-  font-size: 48px;
-  line-height: 1.1;
-}
-
-.title p {
-  font-size: 20px;
-  line-height: 1.6;
+.conformanceTitle  {
+  font-size: 24px;
+  letter-spacing: -.96px;
+  line-height: 32px;
   color: var(--ds-gray-900);
+  font-weight: 500;
+}
+.conformanceTitle strong {
+  font-weight: 600;
+  color: var(--ds-gray-1000);
+  font-size: inherit;
+  margin: 0;
+  display: inline;
 }
 
-.dashboard {
+.conformanceDashboard {
   display: flex;
   background: var(--ds-background-200);
   border-radius: 8px;
   overflow: hidden;
 }
 
-.column {
+.conformanceColumn {
   flex: 1;
   padding: 24px;
 }
 
-.heading {
+.conformanceHeading {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--ds-gray-1000);
   margin-bottom: 16px;
 }
 
-.metrics {
+.conformanceMetrics {
   display: flex;
   flex-direction: column;
   gap: var(--gap, 16px);
 }
 
-.metric {
+.conformanceMetric {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.metricLabel {
+.conformanceMetricLabel {
   font-size: 0.75rem;
   color: var(--ds-gray-900);
 }
 
-.metricValue {
+.conformanceMetricValue {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.score {
+.conformanceScore {
   font-size: 1rem;
   font-weight: 600;
   color: var(--ds-gray-1000);
 }
 
-.divider {
+.conformanceDivider {
   width: 1px;
   background: var(--ds-gray-alpha-400);
   margin: 0;
   border: none;
 }
 
-.teams {
+.conformanceTeams {
   display: flex;
   flex-direction: column;
   gap: var(--gap, 16px);
 }
 
-.team {
+.conformanceTeam {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.teamName {
+.conformanceTeamName {
   font-size: 0.75rem;
   color: var(--ds-gray-900);
 }
 
-.scope {
+.conformanceScope {
   color: var(--ds-gray-900);
 }
 
-.avatarGroup {
+.conformanceAvatarGroup {
   display: flex;
   align-items: center;
 }
 
-.avatar {
+.conformanceAvatar {
   margin-left: -8px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--ds-background-200);
 }
 
-.avatar:first-child {
+.conformanceAvatar:first-child {
   margin-left: 0;
 }
 
-.avatar img {
+.conformanceAvatar img {
   display: block;
   width: 22px;
   height: 22px;

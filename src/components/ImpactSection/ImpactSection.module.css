@@ -10,7 +10,7 @@
   border: 1px solid var(--ds-gray-300);
 }
 
-.stack {
+.impactStack {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,7 @@
   gap: 12px;
 }
 
-.singleRow {
+.impactSingleRow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,18 +33,18 @@
   padding: 0 20px;
 }
 
-.impact {
+.impactTextBlock {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.titleRow {
+.impactTitleRow {
   display: flex;
   align-items: center;
 }
 
-.title {
+.impactTitle {
     font-weight: 600;
     color: var(--ds-gray-1000);
     font-size: 2rem;
@@ -52,7 +52,7 @@
     display: inline;
 }
 
-.actionButton {
+.impactActionButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +68,7 @@
   gap: 8px;
 }
 
-.iconWrapper {
+.impactIconWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,13 +76,13 @@
 }
 
 @media (max-width: 1024px) {
-  .singleRow {
+  .impactSingleRow {
     flex-direction: column;
     text-align: center;
     gap: 24px;
   }
 
-  .title {
+  .impactTitle {
     font-size: 36px;
   }
 }

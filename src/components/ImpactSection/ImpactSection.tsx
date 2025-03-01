@@ -15,35 +15,35 @@ export const ImpactSection: React.FC = () => {
         showGuides={false}
       >
         <GridBlock>
-          <div className={styles.stack}>
-            <div className={styles.singleRow}>
-              <div className={styles.impact}>
-                <div className={styles.titleRow}>
-                  <h2 className={styles.title}>Scale your</h2>
+          <div className={styles.impactStack}>
+            <div className={styles.impactSingleRow}>
+              <div className={styles.impactTextBlock}>
+                <div className={styles.impactTitleRow}>
+                  <h2 className={styles.impactTitle}>Scale your</h2>
                 </div>
               </div>
               
               <Link
                 href="/enterprise"
-                className={styles.actionButton}
+                className={styles.impactActionButton}
               >
-                <span className={styles.iconWrapper}>
+                <span className={styles.impactIconWrapper}>
                   <BuildingIcon />
                 </span>
                 <span>Enterprise</span>
               </Link>
               
-              <div className={styles.impact}>
-                <div className={styles.titleRow}>
-                  <h2 className={styles.title}>without compromising</h2>
+              <div className={styles.impactTextBlock}>
+                <div className={styles.impactTitleRow}>
+                  <h2 className={styles.impactTitle}>without compromising</h2>
                 </div>
               </div>
               
               <Link
                 href="/security"
-                className={styles.actionButton}
+                className={styles.impactActionButton}
               >
-                <span className={styles.iconWrapper}>
+                <span className={styles.impactIconWrapper}>
                   <SecurityIcon />
                 </span>
                 <span>Security</span>

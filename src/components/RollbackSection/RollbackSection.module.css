@@ -1,121 +1,113 @@
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  contain-intrinsic-height: 455px;
-  content-visibility: auto;
-}
-
-.header {
+.rollbackHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.headerLeft {
+.rollbackHeaderLeft {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.iconWrapper {
+.rollbackIconWrapper {
   color: var(--ds-gray-900);
   height: 16px;
   width: 16px;
 }
 
-.label {
+.rollbackLabel {
   color: var(--ds-gray-900);
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
 
-.titleSection {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.title strong {
-  font-size: 48px;
-  line-height: 1.1;
-}
-
-.description {
-  font-size: 20px;
-  line-height: 1.6;
+.rollbackTitleSection {
+  font-size: 24px;
+  letter-spacing: -.96px;
+  line-height: 32px;
   color: var(--ds-gray-900);
+  font-weight: 500;
 }
 
-.deploymentsSection {
+.rollbackTitleSection strong {
+  font-weight: 600;
+  color: var(--ds-gray-1000);
+  font-size: inherit;
+  margin: 0;
+  display: inline;
+}
+
+.rollbackDeploymentsSection {
   display: flex;
   flex-direction: column;
   gap: 0;
   position: relative;
 }
 
-.stack {
+.rollbackDeployments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rollbackStack {
   display: flex;
 }
 
-.deployment {
+.rollbackDeployment {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   padding: 0;
-  gap: 24px;
+  gap: 16px;
 }
 
-.textWrapper {
+.rollbackTextWrapper {
   display: inline;
 }
 
-.originText {
+.rollbackOriginText {
   color: var(--ds-gray-900);
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
 
-.commitHash {
+.rollbackCommitHash {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: var(--ds-gray-1000);
 }
 
-.commitMessage {
+.rollbackCommitMessage {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--ds-gray-1000);
 }
 
-.commitMessage[data-variant="long"] {
+.rollbackCommitMessage[data-variant="long"] {
   display: none;
 }
 
-.connectingLine {
+.rollbackConnectingLine {
   position: relative;
   height: 152px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hide the default connecting line background */
-.connectingLine::before {
+.rollbackConnectingLine::before {
   display: none;
 }
 
-.rewindIcon {
+.rollbackRewindIcon {
   background: var(--geist-background);
   padding: 8px;
   border-radius: 50%;
@@ -123,157 +115,198 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ds-gray-200);
 }
 
-.rewindIconContainer {
+.rollbackRewindIconContainer {
   position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
   background: var(--geist-background);
   padding: 8px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
 }
 
-/* These classes replace the old svg[data-size="large"/"small"] selectors */
-.svgLarge {
+.rollbackRewindLine {
+  height: 100%;
+  width: 2px;
+  background-color: var(--ds-gray-300);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rollbackSvgLarge {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rollbackSvgSmall {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rollbackConnectingLine .rollbackLargeSvg {
   display: block;
 }
 
-.svgSmall {
+.rollbackConnectingLine .rollbackSmallSvg {
   display: none;
 }
 
-.connectingLine .largeSvg {
+.rollbackConnectingLine .rollbackSvgLarge {
   display: block;
 }
 
-.connectingLine .smallSvg {
+.rollbackConnectingLine .rollbackSvgSmall {
   display: none;
 }
 
-.connectingLine .svgLarge {
-  display: block;
+.rollbackRewind {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--geist-background);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ds-gray-200);
 }
 
-.connectingLine .svgSmall {
-  display: none;
+.rollbackRewindIcon {
+  color: var(--ds-gray-900);
 }
 
-@media (min-width: 768px) {
-  .commitMessage[data-variant="short"] {
-    display: none;
-  }
-  
-  .commitMessage[data-variant="long"] {
-    display: inline;
-  }
-
-  /* Show only large SVG on wider screens */
-  .svgSmall {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Show only small SVG on narrow screens */
-  .svgLarge {
-    display: none;
-  }
-  .svgSmall {
-    display: block;
-  }
-
-  .connectingLine .smallSvg {
-    display: block;
-  }
-
-  .connectingLine .svgLarge {
-    display: none;
-  }
-  .connectingLine .svgSmall {
-    display: block;
-  }
-}
-
-.deploymentCard {
+.rollbackDeploymentCard {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 24px;
+  gap: 16px;
   align-items: center;
-  padding: 0;
-  width: 100%;
+  width: 80%;
+  height: 70px;
+  border-radius: 16px;
+  box-shadow: var(--ds-shadow-small);
+  background: var(--ds-background-100);
+  border: 1px solid var(--ds-gray-alpha-400);
+  background-clip: padding-box;
+  padding: 12px;
 }
 
-.deploymentInfo {
+.rollbackDeploymentInfo {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.deploymentHeader {
+.rollbackDeploymentHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.deploymentId {
+.rollbackDeploymentId {
   color: var(--ds-gray-900);
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
 
-.deploymentId strong {
+.rollbackDeploymentId strong {
   color: var(--ds-gray-1000);
   font-weight: 500;
 }
 
-.timeAgo {
+.rollbackTimeAgo {
   color: var(--ds-gray-900);
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
-.commitInfo {
+.rollbackCommitInfo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.commitIcon {
+.rollbackCommitIcon {
   color: var(--ds-gray-900);
 }
 
-.commitHash {
-  color: var(--ds-gray-1000);
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-}
-
-.commitMessage {
-  color: var(--ds-gray-1000);
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.commitMessage[data-variant="long"] {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .commitMessage[data-variant="short"] {
-    display: none;
-  }
-  
-  .commitMessage[data-variant="long"] {
-    display: inline;
-  }
-}
-
-.gaugeWrapper {
+.rollbackGaugeWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.rollbackRewindIcon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ds-gray-900);
+}
+
+@media (min-width: 768px) {
+  .rollbackCommitMessage[data-variant="short"] {
+    display: none;
+  }
+
+  .rollbackCommitMessage[data-variant="long"] {
+    display: inline;
+  }
+
+  .rollbackSvgSmall {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .rollbackContent {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .rollbackDeployments {
+    gap: 16px;
+  }
+
+  .rollbackRewindLine {
+    height: 60px;
+  }
+
+  .rollbackSvgLarge {
+    display: none;
+  }
+
+  .rollbackSvgSmall {
+    display: block;
+  }
+
+  .rollbackConnectingLine .rollbackSmallSvg {
+    display: block;
+  }
+
+  .rollbackConnectingLine .rollbackSvgLarge {
+    display: none;
+  }
+
+  .rollbackConnectingLine .rollbackSvgSmall {
+    display: block;
+  }
+
+  .rollbackConnectingLine {
+    height: 88px;
+  }
 }

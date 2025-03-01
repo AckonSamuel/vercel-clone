@@ -16,7 +16,7 @@
     --lg-cell-columns: 2;
 }
 
-.enterpriseCell {
+.ctaEnterpriseCell {
     --sm-grid-row: 1 / span 1;
     --lg-grid-row: 1 / span 1;
     --sm-grid-column: 1 / span 1;
@@ -25,14 +25,14 @@
     --lg-cell-columns: 1;
 }
 
-.stack {
+.ctaStack {
     display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.primaryContent {
+.ctaPrimaryContent {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -45,23 +45,23 @@
     padding: 0 20px;
 }
 
-.primaryContent i {
+.ctaPrimaryContent i {
     font-weight: 600;
     font-style: normal;
     color: var(--ds-blue-900, hsla(210, 100%, 66%, 1));
 }
 
-.primaryContent u {
+.ctaPrimaryContent u {
     font-weight: 600;
     text-decoration: none;
     color: var(--ds-purple-900);
 }
 
-.boldWhite {
+.ctaBoldWhite {
     color: white;
 }
 
-.secondaryContent {
+.ctaSecondaryContent {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -73,12 +73,12 @@
     padding: 0 20px;
 }
 
-.secondaryContent b {
+.ctaSecondaryContent b {
     font-weight: 600;
     color: var(--ds-gray-1000);
 }
 
-.buttonGroup {
+.ctaButtonGroup {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -88,7 +88,7 @@
 }
 
 @media (min-width: 640px) {
-    .buttonGroup {
+    .ctaButtonGroup {
         flex-direction: row;
     }
     
@@ -96,16 +96,16 @@
         flex-direction: row;
     }
     
-    .stack {
+    .ctaStack {
         flex-direction: row;
     }
 }
 
-.enterpriseButton {
+.ctaEnterpriseButton {
     margin-top: 16px;
 }
 
-.primaryButton {
+.ctaPrimaryButton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -120,11 +120,11 @@
     transition: background-color 0.2s ease;
 }
 
-.primaryButton:hover {
+.ctaPrimaryButton:hover {
     background-color: var(--ds-gray-900);
 }
 
-.secondaryButton {
+.ctaSecondaryButton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -140,6 +140,6 @@
     transition: background-color 0.2s ease;
 }
 
-.secondaryButton:hover {
+.ctaSecondaryButton:hover {
     background-color: var(--ds-gray-100);
 }

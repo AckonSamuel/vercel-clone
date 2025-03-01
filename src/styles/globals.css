@@ -64,7 +64,7 @@
 }
 
 .dark-theme {
-  --background: #0a0a0a;
+  --background: #000;
   --foreground: #ededed;
   --accents-1: #111;
   --accents-2: #333;
