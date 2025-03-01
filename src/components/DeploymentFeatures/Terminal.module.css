@@ -18,18 +18,23 @@
 }
 
 .terminal {
-  width: 90%;
-  max-width: 500px;
+  width: 300px;
+  gap: 12px;
+  overflow: hidden;
+  background: var(--ds-background-200);
+  background-clip: padding-box;
+  padding-left: 8px;
+  padding-right: 8px;
   padding-bottom: 16px;
-  margin-bottom: -80px;
-  z-index: 1;
+  margin-right: 160px;
 }
 
 .browser {
-  width: 90%;
+  width: 70%;
   max-width: 500px;
   height: 280px;
   z-index: 2;
+  margin-left: 64px;
 }
 
 .trafficLights {
@@ -132,24 +137,4 @@
   bottom: 0;
   width: 100%;
   height: auto;
-}
-
-@media (min-width: 768px) {
-  .terminal {
-    margin-bottom: -100px;
-  }
-  
-  .browser {
-    height: 320px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .terminal {
-    margin-bottom: -120px;
-  }
-  
-  .browser {
-    height: 360px;
-  }
 }

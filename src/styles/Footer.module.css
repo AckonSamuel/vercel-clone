@@ -1,7 +1,6 @@
 .footer {
   background: var(--ds-background-100);
-  border-top: 1px solid var(--ds-gray-alpha-400);
-
+  margin-top: 72px;
 }
 
 .navFooter {

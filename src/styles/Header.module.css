@@ -126,7 +126,6 @@
 
 .navDropdown:hover {
   background-color: rgba(255, 255, 255, 0.06);
-
 }
 
 .dropdownArrow {
@@ -221,13 +220,25 @@
   align-items: center;
   padding: 8px;
   border-radius: 6px;
-  transition: background-color 0.15s ease;
+  transition: all 0.15s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .dropdownItem:hover {
-  background-color: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdownItem:hover .dropdownIcon {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.dropdownItem:hover .dropdownItemTitle,
+.dropdownItem:hover .dropdownItemDescription,
+.dropdownItem:hover .menuItemHeading,
+.dropdownItem:hover .menuItemText {
+  color: var(--foreground);
 }
 
 .dropdownIcon {
@@ -240,7 +251,7 @@
   border-radius: 6px;
   margin-right: 12px;
   flex-shrink: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--foreground);
 }
 
 .dropdownItemTitle {
@@ -573,7 +584,6 @@
 }
 
 /* Adding the necessary styles for the three-column dropdown layout */
-
 .dropdownColumns {
   display: flex;
   margin: 0;
@@ -587,7 +597,6 @@
   padding: 16px;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
   overflow: visible;
-  /* Removed word-wrap and overflow-wrap to let content determine width */
 }
 
 .dropdownColumn:last-child {
@@ -612,7 +621,6 @@
   margin-bottom: 2px;
   white-space: normal;
   display: inline-block;
-  /* Removed word-break and overflow-wrap */
   width: 100%;
 }
 
@@ -623,7 +631,6 @@
   margin: 0;
   white-space: normal;
   display: inline-block;
-  /* Removed word-break and overflow-wrap */
   hyphens: auto;
   width: 100%;
 }
@@ -636,16 +643,8 @@
   filter: invert(1);
 }
 
-.iconHover {
-  display: none;
-}
-
 .dropdownItem:hover .iconHover {
   display: flex;
-}
-
-.dropdownItem:hover .dropdownIcon:not(.iconHover) {
-  display: none;
 }
 
 .header {
