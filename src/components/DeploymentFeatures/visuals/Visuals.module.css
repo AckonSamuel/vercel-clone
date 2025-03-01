@@ -1,0 +1,269 @@
+/* Terminal visualization */
+.deployVisualRoot {
+  position: relative;
+  height: 455px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  contain: content;
+}
+
+.window {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--ds-background-200);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.terminal {
+  width: 90%;
+  max-width: 500px;
+  padding-bottom: 16px;
+  margin-bottom: -80px;
+  z-index: 1;
+}
+
+.browser {
+  width: 90%;
+  max-width: 500px;
+  height: 280px;
+  z-index: 2;
+}
+
+.trafficLights {
+  display: flex;
+  padding: 8px;
+  gap: 6px;
+}
+
+.trafficLight {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--ds-gray-500);
+}
+
+.trafficLights[data-colored="true"] .trafficLight:first-child {
+  background-color: #ff5f57;
+}
+
+.trafficLights[data-colored="true"] .trafficLight:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.trafficLights[data-colored="true"] .trafficLight:nth-child(3) {
+  background-color: #28c940;
+}
+
+.codeLine {
+  font-family: var(--ds-font-family-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ds-gray-1000);
+}
+
+.dimmedText {
+  color: var(--ds-gray-800);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ds-gray-300);
+  padding: 8px;
+}
+
+.url {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--ds-gray-200);
+  border-radius: 4px;
+}
+
+.vercelContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 42px);
+  position: relative;
+}
+
+.heroText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ds-gray-900);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.grid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Comments visual styles */
+.commentsRoot {
+  position: relative;
+  height: 455px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  contain: content;
+  padding: 0 16px;
+  contain-intrinsic-height: 500px;
+}
+
+.comment {
+  display: flex;
+  position: relative;
+}
+
+.leftComment {
+  justify-content: flex-start;
+  transform: translateX(-20px);
+}
+
+.rightComment {
+  justify-content: flex-end;
+  transform: translateX(20px);
+}
+
+.bubble {
+  position: relative;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  max-width: 90%;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leftComment .bubble {
+  background-color: var(--ds-gray-200);
+  color: var(--ds-gray-1000);
+  border-bottom-left-radius: 4px;
+}
+
+.rightComment .bubble {
+  background-color: var(--ds-blue-600);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.active .bubble {
+  border: 2px solid var(--ds-blue-400);
+}
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.cursorWrapper {
+  position: relative;
+  width: 17px;
+  height: 18px;
+}
+
+.blue {
+  color: var(--ds-blue-600);
+}
+
+.red {
+  color: var(--ds-red-700);
+}
+
+.teal {
+  color: var(--ds-teal-600);
+}
+
+.cursorName {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.625rem;
+  color: white;
+  white-space: nowrap;
+}
+
+.blue .cursorName {
+  background: var(--ds-blue-600);
+}
+
+.red .cursorName {
+  background: var(--ds-red-700);
+}
+
+.teal .cursorName {
+  background: var(--ds-teal-600);
+}
+
+.caret {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  width: 2px;
+  height: 16px;
+  background-color: white;
+  animation: blink 1s infinite;
+}
+
+.sendButton {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--ds-blue-700);
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .terminal {
+    margin-bottom: -100px;
+  }
+  
+  .browser {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .terminal {
+    margin-bottom: -120px;
+  }
+  
+  .browser {
+    height: 360px;
+  }
+}

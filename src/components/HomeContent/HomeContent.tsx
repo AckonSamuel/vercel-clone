@@ -6,6 +6,7 @@ import ImpactSection from '../ImpactSection/ImpactSection';
 import RollbackContent from '@/components/RollbackSection/RollbackSection';
 import ConformanceContent from '@/components/ConformanceSection/ConformanceSection';
 import AnalyticsSection from '../AnalyticsSection/AnalyticsSection';
+import DeploymentFeatures from '../DeploymentFeatures/DeploymentFeatures';
 
 export const HomeContent: React.FC = () => {
     return (
@@ -14,6 +15,9 @@ export const HomeContent: React.FC = () => {
             
             {/* Include Analytics Section */}
             <AnalyticsSection />
+            
+            {/* Deployment Features Section */}
+            <DeploymentFeatures />
 
             <GridSystem
                 smRows={1}

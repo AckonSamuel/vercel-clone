@@ -1,0 +1,23 @@
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.cursorWrapper {
+  position: relative;
+  width: 17px;
+  height: 18px;
+}
+
+.cursorName {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.625rem;
+  color: white;
+  white-space: nowrap;
+}

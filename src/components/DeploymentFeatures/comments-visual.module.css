@@ -1,0 +1,19 @@
+.root {
+  position: relative;
+  height: 455px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  contain: content;
+  padding: 0 16px;
+}
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
