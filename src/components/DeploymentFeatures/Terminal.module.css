@@ -1,0 +1,155 @@
+.root {
+  position: relative;
+  height: 455px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  contain: content;
+}
+
+.window {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--ds-background-200);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.terminal {
+  width: 90%;
+  max-width: 500px;
+  padding-bottom: 16px;
+  margin-bottom: -80px;
+  z-index: 1;
+}
+
+.browser {
+  width: 90%;
+  max-width: 500px;
+  height: 280px;
+  z-index: 2;
+}
+
+.trafficLights {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 8px;
+  gap: 6px;
+}
+
+.trafficLight {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--ds-gray-500);
+}
+
+.trafficLights[data-colored="true"] .trafficLight:nth-child(1) {
+  background-color: #ff5f57;
+}
+
+.trafficLights[data-colored="true"] .trafficLight:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.trafficLights[data-colored="true"] .trafficLight:nth-child(3) {
+  background-color: #28c940;
+}
+
+.codeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.codeLine {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ds-gray-1000);
+  font-weight: 400;
+}
+
+.dimText {
+  opacity: 0.6;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ds-gray-300);
+  padding: 8px;
+}
+
+.url {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--ds-gray-200);
+  border-radius: 4px;
+}
+
+.urlText {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--ds-gray-900);
+  font-weight: 400;
+}
+
+.vercel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 42px);
+  position: relative;
+}
+
+.heroText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ds-gray-900);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.grid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .terminal {
+    margin-bottom: -100px;
+  }
+  
+  .browser {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .terminal {
+    margin-bottom: -120px;
+  }
+  
+  .browser {
+    height: 360px;
+  }
+}
