@@ -1,0 +1,144 @@
+.cell {
+  contain-intrinsic-height: 455px;
+  content-visibility: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconWrapper {
+  color: var(--ds-gray-900);
+  height: 16px;
+  width: 16px;
+}
+
+.label {
+  color: var(--ds-gray-900);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title strong {
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.title p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--ds-gray-900);
+}
+
+.dashboard {
+  display: flex;
+  background: var(--ds-background-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.column {
+  flex: 1;
+  padding: 24px;
+}
+
+.heading {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ds-gray-1000);
+  margin-bottom: 16px;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 16px);
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--ds-gray-900);
+}
+
+.metricValue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ds-gray-1000);
+}
+
+.divider {
+  width: 1px;
+  background: var(--ds-gray-alpha-400);
+  margin: 0;
+  border: none;
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 16px);
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teamName {
+  font-size: 0.75rem;
+  color: var(--ds-gray-900);
+}
+
+.scope {
+  color: var(--ds-gray-900);
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-left: -8px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--ds-background-200);
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar img {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
