@@ -1,0 +1,279 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  contain-intrinsic-height: 455px;
+  content-visibility: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconWrapper {
+  color: var(--ds-gray-900);
+  height: 16px;
+  width: 16px;
+}
+
+.label {
+  color: var(--ds-gray-900);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title strong {
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--ds-gray-900);
+}
+
+.deploymentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.stack {
+  display: flex;
+}
+
+.deployment {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 24px;
+}
+
+.textWrapper {
+  display: inline;
+}
+
+.originText {
+  color: var(--ds-gray-900);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.commitHash {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: var(--ds-gray-1000);
+}
+
+.commitMessage {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ds-gray-1000);
+}
+
+.commitMessage[data-variant="long"] {
+  display: none;
+}
+
+.connectingLine {
+  position: relative;
+  height: 152px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide the default connecting line background */
+.connectingLine::before {
+  display: none;
+}
+
+.rewindIcon {
+  background: var(--geist-background);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.rewindIconContainer {
+  position: absolute;
+  background: var(--geist-background);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* These classes replace the old svg[data-size="large"/"small"] selectors */
+.svgLarge {
+  display: block;
+}
+
+.svgSmall {
+  display: none;
+}
+
+.connectingLine .largeSvg {
+  display: block;
+}
+
+.connectingLine .smallSvg {
+  display: none;
+}
+
+.connectingLine .svgLarge {
+  display: block;
+}
+
+.connectingLine .svgSmall {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .commitMessage[data-variant="short"] {
+    display: none;
+  }
+  
+  .commitMessage[data-variant="long"] {
+    display: inline;
+  }
+
+  /* Show only large SVG on wider screens */
+  .svgSmall {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Show only small SVG on narrow screens */
+  .svgLarge {
+    display: none;
+  }
+  .svgSmall {
+    display: block;
+  }
+
+  .connectingLine .smallSvg {
+    display: block;
+  }
+
+  .connectingLine .svgLarge {
+    display: none;
+  }
+  .connectingLine .svgSmall {
+    display: block;
+  }
+}
+
+.deploymentCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.deploymentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.deploymentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deploymentId {
+  color: var(--ds-gray-900);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.deploymentId strong {
+  color: var(--ds-gray-1000);
+  font-weight: 500;
+}
+
+.timeAgo {
+  color: var(--ds-gray-900);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.commitInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.commitIcon {
+  color: var(--ds-gray-900);
+}
+
+.commitHash {
+  color: var(--ds-gray-1000);
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+
+.commitMessage {
+  color: var(--ds-gray-1000);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.commitMessage[data-variant="long"] {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .commitMessage[data-variant="short"] {
+    display: none;
+  }
+  
+  .commitMessage[data-variant="long"] {
+    display: inline;
+  }
+}
+
+.gaugeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
