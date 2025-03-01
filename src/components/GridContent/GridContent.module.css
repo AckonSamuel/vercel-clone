@@ -1,0 +1,80 @@
+.gridSystemLazyContent {
+  width: 100%;
+  position: relative;
+  margin-top: 64px;
+}
+
+.primaryCell, 
+.secondaryCell {
+  background: var(--geist-background);
+  border: 1px solid var(--accents-2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.primaryContent,
+.secondaryContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  gap: 24px;
+  padding: 32px;
+}
+
+.primaryDescription,
+.secondaryDescription {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--geist-foreground);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 16px;
+  transition: all 0.2s ease;
+}
+
+.primaryButton {
+  background: var(--geist-foreground);
+  color: var(--geist-background);
+  border: none;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--geist-foreground);
+  border: 1px solid var(--accents-2);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+  opacity: 0.8;
+}
+
+@media (max-width: 960px) {
+  .primaryContent,
+  .secondaryContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .secondaryDescription {
+    font-size: 18px;
+  }
+}
