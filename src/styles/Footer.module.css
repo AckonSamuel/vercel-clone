@@ -1,0 +1,171 @@
+.footer {
+  padding: 64px 24px 32px;
+  background: var(--ds-background-100);
+  border-top: 1px solid var(--ds-gray-alpha-400);
+}
+
+.marketingFooter {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  position: relative;
+  padding-bottom: 64px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--ds-gray-1000);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 12px;
+}
+
+.link {
+  color: var(--ds-gray-900);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--ds-gray-1000);
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoVercel {
+  color: var(--ds-gray-1000);
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--ds-gray-alpha-400);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Status indicator styles */
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.statusContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-success, #22c55e);
+}
+
+.statusText {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ds-gray-1000);
+}
+
+/* Theme switcher styles updated to match the original */
+.themeSwitcher {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.themeSwitcher [style="height:100%"] {
+  position: relative;
+}
+
+.themeSwitcher input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.themeSwitcher label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  color: var(--ds-gray-800);
+}
+
+.themeSwitcher input:checked + label {
+  background-color: var(--ds-gray-200);
+  border-radius: 4px;
+}
+
+.themeSwitcher label:hover {
+  color: var(--ds-gray-1000);
+}
+
+/* Add the tailwind class */
+:global(.ml-auto) {
+  margin-left: auto;
+}
+
+:global(.sr-only) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marketingFooter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .marketingFooter {
+    grid-template-columns: 1fr;
+  }
+}
