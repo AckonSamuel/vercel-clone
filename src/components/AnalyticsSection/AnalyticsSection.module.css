@@ -10,6 +10,7 @@
   width: 100%;
   max-width: 100vw;
   position: relative;
+  border: 1px solid var(--ds-gray-300);
 }
 
 .analyticsCell {
@@ -17,6 +18,9 @@
   width: 100%;
   grid-column: 1 / -1; /* Span all columns */
   min-height: 455px;
+  pointer-events: none;
+  content-visibility: auto;
+  contain-intrinsic-height: 455px;
 }
 
 .callout {
@@ -24,14 +28,17 @@
 }
 
 .impact {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   padding: 32px;
-  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 32px;
+  z-index: 1;
 }
 
 .header {
@@ -63,32 +70,27 @@
 }
 
 .titleSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  font-size: 24px;
+  letter-spacing: -.96px;
+  line-height: 32px;
+  color: var(--ds-gray-900);
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
-  .titleSection {
-    flex-direction: row;
-    gap: 40px;
-  }
 
   .gridContainer {
     grid-template-columns: repeat(var(--md-grid-columns), 1fr);
   }
 }
 
-.titleContent {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.titleContent strong {
-  font-size: 48px;
-  line-height: 1.1;
+.titleSection strong {
+  font-weight: 600;
+  color: var(--ds-gray-1000);
+  font-size: inherit;
+  margin: 0;
+  display: inline;
+  margin-top: -24px;
 }
 
 .description {
@@ -114,6 +116,9 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .largeGraphContainer img {
@@ -154,4 +159,27 @@
   .analyticsCell {
     grid-column: auto; /* Reset grid-column for larger screens if needed */
   }
+}
+
+.lineBreak {
+  display: block;
+}
+
+.gridCrossHorizontalLine {
+  width: var(--cross-half-size);
+  height: var(--cross-size);
+  border-right-width: var(--guide-width);
+}
+
+.gridCrossVerticalLine {
+  width: var(--cross-size);
+  height: var(--cross-half-size);
+  border-bottom-width: var(--guide-width);
+}
+
+.analyticsCellGrid {
+  --sm-grid-row: 1 / span 1;
+  --sm-grid-column: 1 / span 2;
+  --sm-cell-rows: 1;
+  --sm-cell-columns: 2;
 }

@@ -17,11 +17,13 @@ export const HomeContent: React.FC = () => {
             {/* Hero Pitch Section */}
             <HeroPitch />
 
-            {/* Analytics Section */}
-            <AnalyticsSection />
+
 
             {/* Deployment Features Section */}
             <DeploymentFeatures />
+
+            {/* Analytics Section */}
+            <AnalyticsSection />
 
             {/* Rollback and Conformance Section */}
             <RollbackConformanceSection />

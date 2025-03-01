@@ -18,17 +18,18 @@
 }
 
 .terminal {
-  width: 90%;
+  width: 60%;
   max-width: 500px;
+  margin-right: 140px;
   padding-bottom: 16px;
-  margin-bottom: -80px;
   z-index: 1;
 }
 
 .browser {
-  width: 90%;
+  width: 60%;
   max-width: 500px;
   height: 280px;
+  margin-left: 64px;
   z-index: 2;
 }
 

@@ -1,31 +1,26 @@
 import React from 'react';
+import styles from './DeploymentFeatures.module.css';
 import TerminalVisual from './visuals/TerminalVisual';
-import { TerminalIcon } from '../icons/TerminalIcon';
-import styles from './GitDeploySection.module.css';
 
 const GitDeploySection: React.FC = () => {
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.section}>
+      <div className={styles.content}>
         <div className={styles.header}>
-          <div className={styles.headerLeft}>
-            <div className={styles.iconWrapper}>
-              <TerminalIcon />
-            </div>
-            <h2 className={styles.title}>Git-connected Deploys</h2>
-          </div>
+          <span className={styles.label}>Git Integration</span>
         </div>
-        
-        <div className={styles.contentContainer}>
-          <div className={styles.titleContent}>
-            <strong>From localhost to https, in seconds.</strong>
-            <p className={styles.description}>Deploy from Git or your CLI.</p>
-          </div>
-        </div>
+        <h2 className={styles.title}>
+          <strong>Deploy every commit. Preview all branches.</strong>
+        </h2>
+        <p className={styles.description}>
+          Automatically deploy previews for every git push. Get instant, 
+          shareable URLs for review and feedback. All without touching a server.
+        </p>
       </div>
-      
-      <TerminalVisual />
-    </>
+      <div className={styles.visual}>
+        <TerminalVisual />
+      </div>
+    </div>
   );
 };
 
