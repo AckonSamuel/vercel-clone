@@ -5,11 +5,15 @@ import Link from 'next/link';
 import ImpactSection from '../ImpactSection/ImpactSection';
 import RollbackContent from '@/components/RollbackSection/RollbackSection';
 import ConformanceContent from '@/components/ConformanceSection/ConformanceSection';
+import AnalyticsSection from '../AnalyticsSection/AnalyticsSection';
 
 export const HomeContent: React.FC = () => {
     return (
         <div className={styles.content}>
             <ImpactSection />
+            
+            {/* Include Analytics Section */}
+            <AnalyticsSection />
 
             <GridSystem
                 smRows={1}
