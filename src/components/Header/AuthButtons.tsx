@@ -13,6 +13,7 @@ const AuthButtons: React.FC<AuthButtonsProps> = ({ toggleMobileMenu }) => {
     <div className={styles.authButtons}>
       <ThemeToggle className={styles.themeToggle} />
       <Link href="/login" className={styles.loginButton}>Log in</Link>
+      <Link href="/login" className={styles.loginButton}>Contact</Link>
       <Link href="/signup" className={styles.signupButton}>Sign Up</Link>
       <button 
         className={styles.menuButton} 
