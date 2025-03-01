@@ -1,0 +1,68 @@
+.cheapLargeGraph {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.intrinsic {
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.showOnMobile {
+  display: block;
+}
+
+.hideOnMobile {
+  display: none;
+}
+
+.lightMode {
+  display: block;
+}
+
+.darkMode {
+  display: none;
+}
+
+/* Show large graph on screens larger than mobile */
+@media (min-width: 768px) {
+  .showOnMobile {
+    display: none;
+  }
+
+  .hideOnMobile {
+    display: block;
+  }
+}
+
+/* Dark mode detection */
+@media (prefers-color-scheme: dark) {
+  .lightMode {
+    display: none;
+  }
+
+  .darkMode {
+    display: block;
+  }
+}
+
+/* Support for manual theme toggles */
+:global(.dark-theme) .lightMode {
+  display: none;
+}
+
+:global(.dark-theme) .darkMode {
+  display: block;
+}
+
+:global(.light-theme) .lightMode {
+  display: block;
+}
+
+:global(.light-theme) .darkMode {
+  display: none;
+}
