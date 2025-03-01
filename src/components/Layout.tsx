@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       <footer className="geist-footer_footer__pIcfx footer_marketingFooterContainer__cJMpP" data-version="v1">
-        {/* Footer content will go here */}
+       
       </footer>
     </>
   );
