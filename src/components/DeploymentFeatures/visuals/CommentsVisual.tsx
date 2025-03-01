@@ -5,7 +5,7 @@ const CommentsVisual: React.FC = () => {
   return (
     <div 
       aria-label="A message conversation between two people, and the current user. Each message bubble has a floating cursor. The current user is typing to confirm design changes to the Button component."
-      className={styles.root}
+      className={styles.commentsRoot}
       role="img"
     >
       {/* Left side comment */}

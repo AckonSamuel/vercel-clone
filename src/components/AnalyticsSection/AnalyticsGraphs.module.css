@@ -66,3 +66,72 @@
 :global(.light-theme) .darkMode {
   display: none;
 }
+
+.analyticsLargeGraph {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.intrinsicGraph {
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mobileVisible {
+  display: block;
+}
+
+.mobileHidden {
+  display: none;
+}
+
+.lightModeGraph {
+  display: block;
+}
+
+.darkModeGraph {
+  display: none;
+}
+
+/* Show large graph on screens larger than mobile */
+@media (min-width: 768px) {
+  .mobileVisible {
+    display: none;
+  }
+
+  .mobileHidden {
+    display: block;
+  }
+}
+
+/* Dark mode detection */
+@media (prefers-color-scheme: dark) {
+  .lightModeGraph {
+    display: none;
+  }
+
+  .darkModeGraph {
+    display: block;
+  }
+}
+
+/* Support for manual theme toggles */
+:global(.dark-theme) .lightModeGraph {
+  display: none;
+}
+
+:global(.dark-theme) .darkModeGraph {
+  display: block;
+}
+
+:global(.light-theme) .lightModeGraph {
+  display: block;
+}
+
+:global(.light-theme) .darkModeGraph {
+  display: none;
+}

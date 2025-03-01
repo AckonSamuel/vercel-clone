@@ -8,10 +8,14 @@ import ConformanceContent from '@/components/ConformanceSection/ConformanceSecti
 import AnalyticsSection from '../AnalyticsSection/AnalyticsSection';
 import DeploymentFeatures from '../DeploymentFeatures/DeploymentFeatures';
 import HeroPitch from '../HeroPitch/HeroPitch';
+import Hero from '../Hero/Hero';
 
 export const HomeContent: React.FC = () => {
     return (
         <div className={styles.content}>
+            {/* Hero Section */}
+            <Hero />
+            
             {/* Hero Pitch Section */}
             <HeroPitch />
             

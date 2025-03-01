@@ -1,0 +1,49 @@
+.rainbow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 94, 94, 0.06) 15%,
+    rgba(255, 150, 94, 0.06) 30%,
+    rgba(255, 215, 94, 0.06) 45%, 
+    rgba(174, 255, 94, 0.06) 60%, 
+    rgba(94, 255, 245, 0.06) 75%,
+    rgba(94, 199, 255, 0.06) 90%,
+    rgba(94, 112, 255, 0.06) 100%
+  );
+  z-index: 0;
+}
+
+.triangle {
+  width: 100%;
+  height: auto;
+}
+
+.triangleRainbow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 94, 94, 0.06) 15%,
+    rgba(255, 150, 94, 0.06) 30%,
+    rgba(255, 215, 94, 0.06) 45%, 
+    rgba(174, 255, 94, 0.06) 60%, 
+    rgba(94, 255, 245, 0.06) 75%,
+    rgba(94, 199, 255, 0.06) 90%,
+    rgba(94, 112, 255, 0.06) 100%
+  );
+  z-index: 0;
+}
+
+.triangleSvg {
+  width: 100%;
+  height: auto;
+}

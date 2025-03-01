@@ -5,7 +5,7 @@ const TerminalVisual: React.FC = () => {
   return (
     <div 
       aria-label="Two abstract window frames are stacked on top of each other. The bottom window displays a successful &quot;git push&quot; command terminal output. The top window shows a corresponding deployment preview inside a browser." 
-      className={styles.root}
+      className={styles.terminalRoot}
       role="img"
     >
       {/* Terminal Window */}
