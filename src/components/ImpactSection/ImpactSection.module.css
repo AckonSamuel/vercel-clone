@@ -3,22 +3,34 @@
   position: relative;
   contain-intrinsic-height: 455px;
   content-visibility: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  border: 1px solid var(--ds-gray-300);
 }
 
 .stack {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 0;
   width: 100%;
 }
 
 .row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+}
+
+.singleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .impact {
@@ -30,14 +42,14 @@
 .titleRow {
   display: flex;
   align-items: center;
-  gap: 40px;
 }
 
 .title {
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 800;
-  color: var(--geist-foreground);
+    font-weight: 600;
+    color: var(--ds-gray-1000);
+    font-size: 2rem;
+    margin: 0;
+    display: inline;
 }
 
 .actionButton {
@@ -46,7 +58,7 @@
   justify-content: center;
   height: 40px;
   padding: 0 16px;
-  border-radius: 6px;
+  border-radius: 48px;
   font-size: 14px;
   font-weight: 500;
   background: transparent;
@@ -63,15 +75,11 @@
   color: var(--ds-gray-1000);
 }
 
-@media (max-width: 768px) {
-  .titleRow {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .row {
+@media (max-width: 1024px) {
+  .singleRow {
     flex-direction: column;
     text-align: center;
+    gap: 24px;
   }
 
   .title {

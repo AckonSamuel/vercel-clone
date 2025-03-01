@@ -16,16 +16,14 @@ export const HomeContent: React.FC = () => {
         <div className={styles.content}>
             {/* Hero Section */}
             <Hero />
-            
+
             {/* Hero Pitch Section */}
             <HeroPitch />
-            
-            {/* Impact Section */}
-            <ImpactSection />
-            
+
+
             {/* Analytics Section */}
             <AnalyticsSection />
-            
+
             {/* Deployment Features Section */}
             <DeploymentFeatures />
 
@@ -60,6 +58,9 @@ export const HomeContent: React.FC = () => {
                     <ConformanceContent />
                 </GridBlock>
             </GridSystem>
+
+            {/* Impact Section */}
+            <ImpactSection />
 
             {/* CTA Section */}
             <CTASection />

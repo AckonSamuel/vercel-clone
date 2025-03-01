@@ -16,12 +16,13 @@ export const ImpactSection: React.FC = () => {
       >
         <GridBlock>
           <div className={styles.stack}>
-            <div className={styles.row}>
+            <div className={styles.singleRow}>
               <div className={styles.impact}>
                 <div className={styles.titleRow}>
                   <h2 className={styles.title}>Scale your</h2>
                 </div>
               </div>
+              
               <Link
                 href="/enterprise"
                 className={styles.actionButton}
@@ -31,14 +32,13 @@ export const ImpactSection: React.FC = () => {
                 </span>
                 <span>Enterprise</span>
               </Link>
-            </div>
-
-            <div className={styles.row}>
+              
               <div className={styles.impact}>
                 <div className={styles.titleRow}>
                   <h2 className={styles.title}>without compromising</h2>
                 </div>
               </div>
+              
               <Link
                 href="/security"
                 className={styles.actionButton}
