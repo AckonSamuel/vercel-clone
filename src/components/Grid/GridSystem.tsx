@@ -5,6 +5,8 @@ import GridCross from './GridCross';
 
 interface GridSystemProps {
   children: React.ReactNode;
+  rows?: number; // Shorthand for both smRows and lgRows
+  columns?: number; // Shorthand for both smColumns and lgColumns
   smRows?: number;
   lgRows?: number;
   smColumns?: number;

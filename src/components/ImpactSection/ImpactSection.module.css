@@ -1,0 +1,80 @@
+.impactSection {
+  width: 100%;
+  position: relative;
+  contain-intrinsic-height: 455px;
+  content-visibility: auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.impact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--geist-foreground);
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--geist-foreground);
+  border: 1px solid var(--accents-2);
+  transition: all 0.2s ease;
+  gap: 8px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-gray-1000);
+}
+
+@media (max-width: 768px) {
+  .titleRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
