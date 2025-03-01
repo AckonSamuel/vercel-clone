@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 0;
+}
+
+.heading {
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--ds-gray-900);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.heading svg {
+  margin: 0 12px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+  }
+  
+  .heading svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+  }
+}

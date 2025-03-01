@@ -7,13 +7,18 @@ import RollbackContent from '@/components/RollbackSection/RollbackSection';
 import ConformanceContent from '@/components/ConformanceSection/ConformanceSection';
 import AnalyticsSection from '../AnalyticsSection/AnalyticsSection';
 import DeploymentFeatures from '../DeploymentFeatures/DeploymentFeatures';
+import HeroPitch from '../HeroPitch/HeroPitch';
 
 export const HomeContent: React.FC = () => {
     return (
         <div className={styles.content}>
+            {/* Hero Pitch Section */}
+            <HeroPitch />
+            
+            {/* Impact Section */}
             <ImpactSection />
             
-            {/* Include Analytics Section */}
+            {/* Analytics Section */}
             <AnalyticsSection />
             
             {/* Deployment Features Section */}
