@@ -1,7 +1,13 @@
 .footer {
-  padding: 64px 24px 32px;
   background: var(--ds-background-100);
   border-top: 1px solid var(--ds-gray-alpha-400);
+
+}
+
+.navFooter {
+  border: 1px solid black;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
 .marketingFooter {
@@ -9,9 +15,9 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 32px;
+  gap: 12px;
   position: relative;
-  padding-bottom: 64px;
+  padding-bottom: 12px;
 }
 
 .group {
@@ -55,15 +61,13 @@
 
 .logoVercel {
   color: var(--ds-gray-1000);
+  margin-left: auto;
 }
 
 .statusRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 32px;
-  padding-top: 32px;
-  border-top: 1px solid var(--ds-gray-alpha-400);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -86,13 +90,13 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--status-success, #22c55e);
+  background-color: var(--geist-success, #0070f3);
 }
 
 .statusText {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: var(--ds-gray-1000);
+  color: var(--geist-success, #0070f3);
 }
 
 /* Theme switcher styles updated to match the original */
@@ -104,7 +108,8 @@
   margin: 0;
   margin-left: auto;
   background: transparent;
-  border-radius: 4px;
+  border: 1px solid var(--ds-gray-700);
+  border-radius: 16px;
 }
 
 .themeSwitcher [style="height:100%"] {
@@ -132,12 +137,12 @@
 }
 
 .themeSwitcher input:checked + label {
-  background-color: var(--ds-gray-200);
-  border-radius: 4px;
+  border: 1px solid var(--ds-gray-700);
+  border-radius: 50%;
 }
 
 .themeSwitcher label:hover {
-  color: var(--ds-gray-1000);
+  color: white;
 }
 
 /* Add the tailwind class */

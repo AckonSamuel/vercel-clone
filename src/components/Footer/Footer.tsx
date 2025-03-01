@@ -9,7 +9,7 @@ import { VercelLogo } from '@/components/icons/VercelLogo';
 const Footer: React.FC = () => {
     return (
         <footer className={styles.footer} data-version="v1" data-variant="subtle">
-            <nav aria-label="Vercel Directory">
+            <nav aria-label="Vercel Directory" className={styles.navFooter}>
                 <div className={styles.marketingFooter}>
                     <FooterGroup
                         title="Products"
