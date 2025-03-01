@@ -8,20 +8,20 @@ const Logo: React.FC = () => {
     <div className={styles.logoContainer}>
       <Link href="/" className={styles.logoLink}>
         <Image 
-          src="/vc-ap-vercel-marketing/_next/static/media/vercel-logotype-light.cf7eca76.svg"
+          src="/vercel-logotype-light.cf7eca76.svg"
           alt="Vercel Logo"
-          width={120}
-          height={24}
-          priority
-          className={styles.darkThemeLogo}
-        />
-        <Image 
-          src="/vc-ap-vercel-marketing/_next/static/media/vercel-logotype-dark.01246f11.svg"
-          alt="Vercel Logo"
-          width={120}
+          width={90}
           height={24}
           priority
           className={styles.lightThemeLogo}
+        />
+        <Image 
+          src="/vercel-logotype-dark.01246f11.svg"
+          alt="Vercel Logo"
+          width={90}
+          height={24}
+          priority
+          className={styles.darkThemeLogo}
         />
       </Link>
     </div>
