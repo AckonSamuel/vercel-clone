@@ -1,0 +1,23 @@
+.stack {
+  --stack-flex: initial;
+  --stack-direction: column;
+  --stack-align: stretch;
+  --stack-justify: flex-start;
+  --stack-padding: 0px;
+}
+
+.grid {
+  --grid-rows: 1;
+  --grid-columns: 1;
+  --sm-height: fit-content;
+}
+
+.gridSystem {
+  --min-width: 250px;
+}
+
+.crossLine {
+  width: var(--cross-half-size);
+  height: var(--cross-size);
+  border-right-width: var(--guide-width);
+}

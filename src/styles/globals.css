@@ -14,18 +14,33 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accents-1: #fafafa;
-  --accents-2: #eaeaea;
-  --accents-3: #999;
-  --accents-4: #888;
-  --accents-5: #666;
-  --accents-6: #444;
-  --accents-7: #333;
-  --accents-8: #111;
+  --accents-1: #111;
+  --accents-2: #333;
+  --accents-3: #444;
+  --accents-4: #666;
+  --accents-5: #888;
+  --accents-6: #999;
+  --accents-7: #eaeaea;
+  --accents-8: #fafafa;
   --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
   --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
   --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
   --portal-opacity: 0.25;
+
+  /* Colors */
+  --geist-background: #000;
+  --geist-foreground: #fff;
+  
+  /* Grid System */
+  --guide-width: 1px;
+  --guide-color: rgba(255, 255, 255, 0.1);
+  --guide-opacity: 0.5;
+  --cross-size: 16px;
+  --cross-half-size: 8px;
+  
+  /* Spacing */
+  --stack-gap: 24px;
+  --stack-padding: 0px;
 }
 
 .dark-theme {
@@ -43,6 +58,34 @@
   --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.5);
   --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.5);
   --portal-opacity: 0.65;
+}
+
+[data-theme='dark'] {
+  --geist-background: #000;
+  --geist-foreground: #fff;
+  --accents-1: #111;
+  --accents-2: #333;
+  --accents-3: #444;
+  --accents-4: #666;
+  --accents-5: #888;
+  --accents-6: #999;
+  --accents-7: #eaeaea;
+  --accents-8: #fafafa;
+  --guide-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] {
+  --geist-background: #fff;
+  --geist-foreground: #000;
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
+  --guide-color: rgba(0, 0, 0, 0.1);
 }
 
 html, body {

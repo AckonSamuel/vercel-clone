@@ -1,0 +1,102 @@
+.homeSection {
+  width: 100%;
+  padding: 64px 24px;
+  background: var(--geist-background);
+}
+
+.container {
+  max-width: var(--page-width, 1200px);
+  margin: 0 auto;
+}
+
+.gridSystemLazyContent {
+  width: 100%;
+  position: relative;
+  margin-top: 64px;
+}
+
+.primaryCell,
+.secondaryCell {
+  background: transparent;
+  position: relative;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--stack-gap, 24px);
+  padding: var(--stack-padding, 0px);
+}
+
+.primaryContent,
+.secondaryContent {
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.primaryDescription p,
+.secondaryDescription p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--geist-foreground);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.primaryButton {
+  background: var(--geist-foreground);
+  color: var(--geist-background);
+  border: none;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--geist-foreground);
+  border: 1px solid var(--accents-2);
+}
+
+@media (max-width: 960px) {
+  .primaryContent,
+  .secondaryContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .stack {
+    align-items: center;
+    text-align: center;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
